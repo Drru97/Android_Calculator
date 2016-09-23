@@ -130,7 +130,7 @@ namespace Calculator
                 // Throws while division by zero
                 catch (Exception)
                 {
-                    _twOut.Text = "Infinity";
+                    _twOut.Text = "@string/Infinity";
                 }
             _twOut.Text = _result.ToString(CultureInfo.InvariantCulture);
             _result = 0;
