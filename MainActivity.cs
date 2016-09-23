@@ -18,13 +18,13 @@ namespace Calculator
             base.OnCreate(bundle);
 
             // Set our view from the "main" layout resource
-            SetContentView(Resource.Layout.Main);
+            SetContentView(Resource.Layout.tLayout);
 
             // Get our button from the layout resource,
             // and attach an event to it
-            Button button = FindViewById<Button>(Resource.Id.MyButton);
+          //  Button button = FindViewById<Button>(Resource.Id.MyButton);
 
-            button.Click += delegate { button.Text = string.Format($"{count++} taps!"); };
+          //  button.Click += delegate { button.Text = string.Format($"{count++} taps!"); };
         }
     }
 }
