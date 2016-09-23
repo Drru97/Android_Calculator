@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Globalization;
 using Android.App;
+using Android.Content.PM;
 using Android.Widget;
 using Android.OS;
 
@@ -24,6 +25,10 @@ namespace Calculator
 
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.tLayout);
+
+            // Set portrait orientation for avoid bugs
+            RequestedOrientation = ScreenOrientation.Portrait;
+
             // Initialize the array of the buttons
             _buttons = new[]
             {
