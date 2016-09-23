@@ -155,7 +155,7 @@
                 android:id="@+id/button12"
                 android:layout_height="200px"
                 android:layout_width="250px"
-                android:background="#FFBFBF"
+                android:background="#2F00A6"
                 android:layout_margin="5px" />
             <Button
                 android:text="+"
