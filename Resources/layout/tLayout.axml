@@ -12,6 +12,14 @@
         android:layout_height="wrap_content"
         android:id="@+id/tableLayout1"
         android:stretchColumns="4">
+        <TextView
+            android:text="Тут будуть ваші обчислення"
+            android:id="@+id/twOut"
+            android:textColor="#A5A5A5"
+            android:height="200px"
+            android:textSize="36dp"
+            android:gravity="center"
+            android:background="#FFFFFF" />
         <TableRow
             android:id="@+id/tableRow1"
             android:layout_margin="5px">
