@@ -1,17 +1,14 @@
-﻿using System;
-using Android.App;
-using Android.Content;
-using Android.Runtime;
-using Android.Views;
+﻿using Android.App;
 using Android.Widget;
 using Android.OS;
 
 namespace Calculator
 {
-    [Activity(Label = "Calculator", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "@string/ApplicationName", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
-        int count = 1;
+        private Button[] _buttons;
+        private TextView _twOut;
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -19,12 +16,26 @@ namespace Calculator
 
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.tLayout);
+            // Initialize the array of the buttons
+            _buttons = new[] { FindViewById<Button>(Resource.Id.button1), FindViewById<Button>(Resource.Id.button2),
+                                FindViewById<Button>(Resource.Id.button3), FindViewById<Button>(Resource.Id.button4),
+                                FindViewById<Button>(Resource.Id.button5), FindViewById<Button>(Resource.Id.button6),
+                                FindViewById<Button>(Resource.Id.button7), FindViewById<Button>(Resource.Id.button8),
+                                FindViewById<Button>(Resource.Id.button9), FindViewById<Button>(Resource.Id.button10),
+                                FindViewById<Button>(Resource.Id.button11), FindViewById<Button>(Resource.Id.button12),
+                                FindViewById<Button>(Resource.Id.button13), FindViewById<Button>(Resource.Id.button1),
+                                FindViewById<Button>(Resource.Id.button14), FindViewById<Button>(Resource.Id.button15),
+                                FindViewById<Button>(Resource.Id.button16), FindViewById<Button>(Resource.Id.button17) };
+            // Initialize output text field
+            _twOut = FindViewById<TextView>(Resource.Id.twOut);
+            // Add event for digit buttons
+            for (int i = 0; i < 11; i++)
+                AddDigit(_buttons[i]);
+        }
 
-            // Get our button from the layout resource,
-            // and attach an event to it
-          //  Button button = FindViewById<Button>(Resource.Id.MyButton);
-
-          //  button.Click += delegate { button.Text = string.Format($"{count++} taps!"); };
+        void AddDigit(Button button)
+        {
+            button.Click += delegate { _twOut.Text += button.Text; };
         }
     }
 }

@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#A5A5A5"
-    android:id="@+id/linearLayout1">
+    android:id="@+id/linearLayout1"
+    android:label="@string/ApplicationName">
     <TableLayout
         android:minWidth="25px"
         android:minHeight="25px"
@@ -13,7 +14,6 @@
         android:id="@+id/tableLayout1"
         android:stretchColumns="4">
         <TextView
-            android:text="Тут будуть ваші обчислення"
             android:id="@+id/twOut"
             android:textColor="#A5A5A5"
             android:height="200px"
@@ -26,7 +26,7 @@
             <Button
                 android:text="7"
                 android:layout_column="0"
-                android:id="@+id/button13"
+                android:id="@+id/button9"
                 android:layout_width="250px"
                 android:layout_height="200px"
                 android:background="#FFBFBF"
@@ -34,7 +34,7 @@
             <Button
                 android:text="8"
                 android:layout_column="1"
-                android:id="@+id/button14"
+                android:id="@+id/button10"
                 android:layout_width="250px"
                 android:layout_height="200px"
                 android:background="#FFBFBF"
@@ -42,7 +42,7 @@
             <Button
                 android:text="9"
                 android:layout_column="2"
-                android:id="@+id/button15"
+                android:id="@+id/button11"
                 android:layout_width="250px"
                 android:layout_height="200px"
                 android:background="#FFBFBF"
@@ -70,28 +70,28 @@
             <Button
                 android:text="4"
                 android:layout_column="0"
-                android:id="@+id/button9"
+                android:id="@+id/button6"
                 android:layout_height="200px"
                 android:background="#FFBFBF"
                 android:layout_margin="5px" />
             <Button
                 android:text="5"
                 android:layout_column="1"
-                android:id="@+id/button10"
+                android:id="@+id/button7"
                 android:layout_height="200px"
                 android:background="#FFBFBF"
                 android:layout_margin="5px" />
             <Button
                 android:text="6"
                 android:layout_column="2"
-                android:id="@+id/button11"
+                android:id="@+id/button8"
                 android:layout_height="200px"
                 android:background="#FFBFBF"
                 android:layout_margin="5px" />
             <Button
                 android:text="x"
                 android:layout_column="3"
-                android:id="@+id/button12"
+                android:id="@+id/button15"
                 android:layout_height="200px"
                 android:layout_width="250px"
                 android:background="#E941CA"
@@ -103,21 +103,21 @@
             <Button
                 android:text="1"
                 android:layout_column="0"
-                android:id="@+id/button5"
+                android:id="@+id/button3"
                 android:layout_height="200px"
                 android:background="#FFBFBF"
                 android:layout_margin="5px" />
             <Button
                 android:text="2"
                 android:layout_column="1"
-                android:id="@+id/button6"
+                android:id="@+id/button4"
                 android:layout_height="200px"
                 android:background="#FFBFBF"
                 android:layout_margin="5px" />
             <Button
                 android:text="3"
                 android:layout_column="2"
-                android:id="@+id/button7"
+                android:id="@+id/button5"
                 android:layout_height="200px"
                 android:layout_width="250px"
                 android:background="#FFBFBF"
@@ -125,7 +125,7 @@
             <Button
                 android:text="-"
                 android:layout_column="3"
-                android:id="@+id/button8"
+                android:id="@+id/button14"
                 android:layout_height="200px"
                 android:layout_width="250px"
                 android:background="#E941CA"
@@ -152,7 +152,7 @@
             <Button
                 android:text="="
                 android:layout_column="2"
-                android:id="@+id/button3"
+                android:id="@+id/button12"
                 android:layout_height="200px"
                 android:layout_width="250px"
                 android:background="#FFBFBF"
@@ -160,7 +160,7 @@
             <Button
                 android:text="+"
                 android:layout_column="3"
-                android:id="@+id/button4"
+                android:id="@+id/button13"
                 android:layout_width="250px"
                 android:layout_height="200px"
                 android:background="#E941CA"
