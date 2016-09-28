@@ -64,6 +64,7 @@ namespace Calculator
 
             // Add event for clear button pressed
             _buttons[17].Click += ClearPressed;
+      //      _buttons[10].Click += delegate { Toast.MakeText(Application.Context, "Діма хуй", ToastLength.Short).Show(); };
         }
 
         private void PointPressed(object sender, EventArgs e)
