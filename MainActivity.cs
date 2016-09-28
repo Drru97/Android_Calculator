@@ -4,6 +4,8 @@ using Android.App;
 using Android.Content.PM;
 using Android.Widget;
 using Android.OS;
+using Android.Views;
+using Java.Util;
 
 namespace Calculator
 {
@@ -18,6 +20,7 @@ namespace Calculator
         private bool _isDigit;
         private bool _pointPressed;
         private double _result;
+        private HorizontalScrollView _scrollView;
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -27,7 +30,7 @@ namespace Calculator
             SetContentView(Resource.Layout.tLayout);
 
             // Set portrait orientation for avoid bugs
-            RequestedOrientation = ScreenOrientation.Portrait;
+            // RequestedOrientation = ScreenOrientation.Portrait;
 
             // Initialize the array of the buttons
             _buttons = new[]
@@ -44,6 +47,9 @@ namespace Calculator
             };
             // Initialize output text field
             _twOut = FindViewById<TextView>(Resource.Id.twOut);
+
+            // Initialize ScrollView
+            _scrollView = FindViewById<HorizontalScrollView>(Resource.Id.horizontalScrollView1);
 
             // Initialize comma button
             _buttons[0].Click += PointPressed;
@@ -64,7 +70,11 @@ namespace Calculator
 
             // Add event for clear button pressed
             _buttons[17].Click += ClearPressed;
-      //      _buttons[10].Click += delegate { Toast.MakeText(Application.Context, "Діма хуй", ToastLength.Short).Show(); };
+            //      _buttons[10].Click += delegate { Toast.MakeText(Application.Context, "Діма хуй", ToastLength.Short).Show(); };
+
+            // Restore saved application state
+            if (bundle != null)
+                _twOut.Text = bundle.GetString("expression", "");
         }
 
         private void PointPressed(object sender, EventArgs e)
@@ -90,6 +100,9 @@ namespace Calculator
         {
             Button digit = (Button)sender;
             _twOut.Text += digit.Text;
+            if (_twOut.Text.Length > 10)
+                _scrollView.ScrollBy((int)_twOut.TextSize - 10, 0);
+
         }
 
         private void OperatorPressed(object sender, EventArgs e)
@@ -109,6 +122,8 @@ namespace Calculator
             _pointPressed = false;
             _operationPressed = false;
             _result = 0;
+            _twOut.LayoutParameters.Width = 100;
+            _scrollView.ScrollTo(0, 0);
         }
 
         private void EqualsPressed(object sender, EventArgs e)
@@ -140,6 +155,47 @@ namespace Calculator
                 }
             _twOut.Text = _result.ToString(CultureInfo.InvariantCulture);
             _result = 0;
+        }
+
+        protected void OnRestoreInstanceState(Bundle savedInstanceState)
+        {
+            base.OnRestoreInstanceState(savedInstanceState);
+        }
+
+        protected void OnDestroy()
+        {
+            base.OnDestroy();
+        }
+
+        protected void OnPause()
+        {
+            base.OnPause();
+        }
+
+        protected void OnRestart()
+        {
+            base.OnRestart();
+        }
+
+        protected void OnResume()
+        {
+            base.OnResume();
+        }
+
+        protected void OnSaveInstanceState(Bundle outState)
+        {
+            outState.PutString("expression", _twOut.Text);
+            base.OnSaveInstanceState(outState);
+        }
+
+        protected void OnStart()
+        {
+            base.OnStart();
+        }
+
+        protected void OnStop()
+        {
+            base.OnStop();
         }
     }
 }

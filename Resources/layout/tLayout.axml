@@ -12,167 +12,230 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:id="@+id/linearLayout2"
         android:gravity="right">
-        <TextView
-            android:id="@+id/twOut"
-            android:textColor="#A5A5A5"
-            android:textSize="36dp"
-            android:background="#FFFFFF"
+        <HorizontalScrollView
+            android:minWidth="250px"
+            android:minHeight="25px"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:id="@+id/horizontalScrollView1"
+            android:scrollbars="horizontal"
+            android:fillViewport="true"
             android:layout_weight="100"
-            android:layout_margin="5px"
-            android:focusable="true" />
+            android:focusable="true"
+            android:layout_marginRight="5dp">
+            <TextView
+                android:id="@+id/twOut"
+                android:textColor="#A5A5A5"
+                android:textSize="42dp"
+                android:background="@drawable/textviewround"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="100"
+                android:focusable="true"
+                android:isScrollContainer="true"
+                android:gravity="left"
+                android:padding="10dp"
+                android:layout_margin="1dp" />
+        </HorizontalScrollView>
         <Button
             android:text="DEL"
             android:id="@+id/button17"
             android:background="@drawable/equalsbutton"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_margin="5px" />
+            android:layout_margin="2dp" />
     </LinearLayout>
     <TableLayout
-        android:minWidth="25px"
-        android:minHeight="25px"
-        android:layout_width="wrap_content"
         android:id="@+id/tableLayout1"
-        android:stretchColumns="4"
-        android:layout_height="wrap_content">
+        android:stretchColumns="*"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_weight="1">
         <TableRow
             android:id="@+id/tableRow1"
-            android:layout_margin="5px"
-            android:layout_width="wrap_content">
+            android:layout_margin="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1">
             <Button
                 android:text="7"
                 android:layout_column="0"
                 android:id="@+id/button9"
-                android:layout_height="200px"
                 android:background="@drawable/roundButton"
-                android:layout_margin="5px"
-                android:layout_width="fill_parent" />
+                android:layout_margin="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10" />
             <Button
                 android:text="8"
                 android:layout_column="1"
                 android:id="@+id/button10"
-                android:layout_height="200px"
                 android:background="@drawable/roundButton"
-                android:layout_margin="5px"
-                android:layout_width="fill_parent" />
+                android:layout_margin="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10" />
             <Button
                 android:text="9"
                 android:layout_column="2"
                 android:id="@+id/button11"
-                android:layout_height="200px"
                 android:background="@drawable/roundButton"
-                android:layout_margin="5px"
-                android:layout_width="fill_parent" />
+                android:layout_margin="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10" />
             <Button
                 android:text="/"
                 android:layout_column="3"
                 android:id="@+id/button16"
-                android:layout_height="200px"
-                android:layout_margin="5px"
-                android:layout_width="fill_parent"
-                android:background="@drawable/operationButton" />
+                android:layout_margin="2dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/operationButton"
+                android:layout_width="match_parent"
+                android:layout_weight="10" />
         </TableRow>
         <TableRow
             android:id="@+id/tableRow2"
-            android:layout_margin="5px">
+            android:layout_margin="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1">
             <Button
                 android:text="4"
                 android:layout_column="0"
                 android:id="@+id/button6"
-                android:layout_height="200px"
                 android:background="@drawable/roundButton"
-                android:layout_margin="5px" />
+                android:layout_margin="2dp"
+                android:layout_width="match_parent"
+                android:layout_weight="10"
+                android:layout_height="match_parent" />
             <Button
                 android:text="5"
                 android:layout_column="1"
                 android:id="@+id/button7"
-                android:layout_height="200px"
                 android:background="@drawable/roundButton"
-                android:layout_margin="5px" />
+                android:layout_margin="2dp"
+                android:layout_width="match_parent"
+                android:layout_weight="10"
+                android:layout_height="match_parent" />
             <Button
                 android:text="6"
                 android:layout_column="2"
                 android:id="@+id/button8"
-                android:layout_height="200px"
                 android:background="@drawable/roundButton"
-                android:layout_margin="5px" />
+                android:layout_margin="2dp"
+                android:layout_width="match_parent"
+                android:layout_weight="10"
+                android:layout_height="match_parent" />
             <Button
                 android:text="x"
                 android:layout_column="3"
                 android:id="@+id/button15"
-                android:layout_height="200px"
                 android:background="@drawable/operationButton"
-                android:layout_margin="5px" />
+                android:layout_margin="2dp"
+                android:layout_width="match_parent"
+                android:layout_weight="10"
+                android:layout_height="match_parent" />
         </TableRow>
         <TableRow
             android:id="@+id/tableRow3"
-            android:layout_margin="5px">
+            android:layout_margin="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1">
             <Button
                 android:text="1"
                 android:layout_column="0"
                 android:id="@+id/button3"
-                android:layout_height="200px"
                 android:background="@drawable/roundButton"
-                android:layout_margin="5px" />
+                android:layout_margin="2dp"
+                android:layout_width="match_parent"
+                android:layout_weight="10"
+                android:layout_height="match_parent" />
             <Button
                 android:text="2"
                 android:layout_column="1"
                 android:id="@+id/button4"
-                android:layout_height="200px"
                 android:background="@drawable/roundButton"
-                android:layout_margin="5px" />
+                android:layout_margin="2dp"
+                android:layout_width="match_parent"
+                android:layout_weight="10"
+                android:layout_height="match_parent" />
             <Button
                 android:text="3"
                 android:layout_column="2"
                 android:id="@+id/button5"
-                android:layout_height="200px"
                 android:background="@drawable/roundButton"
-                android:layout_margin="5px" />
+                android:layout_margin="2dp"
+                android:layout_width="match_parent"
+                android:layout_weight="10"
+                android:layout_height="match_parent" />
             <Button
                 android:text="-"
                 android:layout_column="3"
                 android:id="@+id/button14"
-                android:layout_height="200px"
                 android:background="@drawable/operationButton"
-                android:layout_margin="5px" />
+                android:layout_margin="2dp"
+                android:layout_width="match_parent"
+                android:layout_weight="10"
+                android:layout_height="match_parent" />
         </TableRow>
         <TableRow
             android:id="@+id/tableRow4"
-            android:layout_margin="5px">
+            android:layout_margin="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1">
             <Button
                 android:text="."
                 android:layout_column="0"
                 android:id="@+id/button1"
-                android:layout_height="200px"
                 android:background="@drawable/roundButton"
                 android:textColor="#000000"
-                android:layout_margin="5px" />
+                android:layout_margin="2dp"
+                android:layout_width="match_parent"
+                android:layout_weight="10"
+                android:layout_height="match_parent" />
             <Button
                 android:text="0"
                 android:layout_column="1"
                 android:id="@+id/button2"
-                android:layout_height="200px"
                 android:background="@drawable/roundButton"
-                android:layout_margin="5px" />
+                android:layout_margin="2dp"
+                android:layout_width="match_parent"
+                android:layout_weight="10"
+                android:layout_height="match_parent" />
             <Button
                 android:text="="
                 android:layout_column="2"
                 android:id="@+id/button12"
-                android:layout_height="200px"
-                android:layout_margin="5px"
-                android:background="@drawable/equalsbutton" />
+                android:layout_margin="2dp"
+                android:background="@drawable/equalsbutton"
+                android:layout_width="match_parent"
+                android:layout_weight="10"
+                android:layout_height="match_parent" />
             <Button
                 android:text="+"
                 android:layout_column="3"
                 android:id="@+id/button13"
-                android:layout_height="200px"
                 android:background="@drawable/operationButton"
-                android:layout_margin="5px" />
+                android:layout_margin="2dp"
+                android:layout_width="match_parent"
+                android:layout_weight="10"
+                android:layout_height="match_parent" />
         </TableRow>
+        <LinearLayout
+            android:orientation="vertical"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:id="@+id/linearLayout3"
+            android:layout_weight="5" />
     </TableLayout>
 </LinearLayout>
