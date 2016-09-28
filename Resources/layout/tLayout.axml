@@ -6,20 +6,40 @@
     android:background="#A5A5A5"
     android:id="@+id/linearLayout1"
     android:label="@string/ApplicationName">
-    <TableLayout
-        android:minWidth="25px"
-        android:minHeight="25px"
-        android:layout_width="fill_parent"
-        android:id="@+id/tableLayout1"
-        android:stretchColumns="4"
-        android:layout_height="fill_parent">
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout2"
+        android:weightSum="100">
         <TextView
             android:id="@+id/twOut"
             android:textColor="#A5A5A5"
-            android:height="200px"
             android:textSize="36dp"
-            android:gravity="center"
-            android:background="#FFFFFF" />
+            android:background="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="110"
+            android:layout_margin="5px" />
+        <Button
+            android:text="DEL"
+            android:id="@+id/button17"
+            android:background="#2F00A6"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:layout_margin="5px" />
+    </LinearLayout>
+    <TableLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="wrap_content"
+        android:id="@+id/tableLayout1"
+        android:stretchColumns="4"
+        android:layout_height="wrap_content">
         <TableRow
             android:id="@+id/tableRow1"
             android:layout_margin="5px">
@@ -59,14 +79,6 @@
                 android:layout_margin="5px"
                 android:layout_width="fill_parent"
                 android:layout_weight="25" />
-            <Button
-                android:text="DEL"
-                android:layout_column="4"
-                android:id="@+id/button17"
-                android:background="#2F00A6"
-                android:layout_margin="5px"
-                android:layout_height="200px"
-                android:layout_weight="0" />
         </TableRow>
         <TableRow
             android:id="@+id/tableRow2"
@@ -165,7 +177,7 @@
                 android:layout_column="2"
                 android:id="@+id/button12"
                 android:layout_height="200px"
-                android:background="#FFBFBF"
+                android:background="#2F00A6"
                 android:layout_margin="5px"
                 android:layout_weight="20" />
             <Button
